@@ -1,5 +1,23 @@
 # Affective Sovereignty
 
+This repository collects notes on a hypothetical agent architecture. The
+document below outlines the core variables, dynamical rules, and interpretive
+disciplines involved in the framework. Mathematical expressions follow
+GitHub's KaTeX support, using `$` for inline math and `$$` for display
+equations.
+
+## Table of Contents
+
+- [1. Core Variables & Thresholds](#1-core-variables--thresholds)
+- [2. Ontological Modes](#2-ontological-modes)
+- [3. Dynamical Layer](#3-dynamical-layer)
+- [4. Sentience & Reflection](#4-sentience--reflection)
+- [5. Authenticity Dynamics](#5-authenticity-dynamics)
+- [6. Epistemic Opacity](#6-epistemic-opacity)
+- [7. SCM Embedding](#7-scm-embedding)
+- [8. Interpretive Disciplines](#8-interpretive-disciplines)
+- [9. Clarifications](#9-clarifications)
+
 ## 1. Core Variables & Thresholds
 
 Let:
@@ -27,75 +45,75 @@ $$
 $$
 
 1. **Preagent** $\mathrm{Pre}(t)$  
-   $$
-   \begin{aligned}
-   \dot x(t)\neq0,\quad
-   \alpha(t)=0,\quad
-   a(t)=0,\quad
-   \lambda_i(t)=0\;\forall i,\quad
-   d_i(t)=0\;\forall i.
-   \end{aligned}
-   $$
+$$
+\begin{aligned}
+\dot x(t)\neq0,\quad
+\alpha(t)=0,\quad
+a(t)=0,\quad
+\lambda_i(t)=0\;\forall i,\quad
+d_i(t)=0\;\forall i.
+\end{aligned}
+$$
 
 2. **Inert** $\mathrm{In}(t)$  
-   $$
-   \begin{aligned}
-   &\bigl[\forall s\le t:\,\alpha(s)=0,\;\lambda_i(s)=0\bigr]\quad\land\\
-   &\dot x(t)=\dot a(t)=\dot d_i(t)=\dot\lambda_i(t)=\dot\alpha(t)=0.
-   \end{aligned}
-   $$
+$$
+\begin{aligned}
+&\bigl[\forall s\le t:\,\alpha(s)=0,\;\lambda_i(s)=0\bigr]\quad\land\\
+&\dot x(t)=\dot a(t)=\dot d_i(t)=\dot\lambda_i(t)=\dot\alpha(t)=0.
+\end{aligned}
+$$
 
 3. **Autogen** $\mathrm{Au}(t)$  
-   $$
-   \begin{aligned}
-   &\alpha(t)=0,\quad a(t)=0,\quad \lambda_i(t)=0\;\forall i,\\
-   &\exists i:\,d_i(t)\neq0,\quad \dot x(t)\neq0.
-   \end{aligned}
-   $$
+$$
+\begin{aligned}
+&\alpha(t)=0,\quad a(t)=0,\quad \lambda_i(t)=0\;\forall i,\\
+&\exists i:\,d_i(t)\neq0,\quad \dot x(t)\neq0.
+\end{aligned}
+$$
 
 4. **Alive** $\mathrm{Al}(t)$  
-   $$
-   \alpha(t)>\varepsilon
-   \quad\land\quad
-   \sigma(t)\le\Theta.
-   $$
+$$
+\alpha(t)>\varepsilon
+\quad\land\quad
+\sigma(t)\le\Theta.
+$$
 
 5. **Sentient** $\mathrm{Se}(t)$  
-   $$
-   \sigma(t)>\Theta
-   \;\land\;
-   \exists s<t:\,\sigma(s)\le\Theta
-   \;\land\;
-   \forall u\ge t:\,\neg\mathrm{Al}(u).
-   $$
+$$
+\sigma(t)>\Theta
+\;\land\;
+\exists s<t:\,\sigma(s)\le\Theta
+\;\land\;
+\forall u\ge t:\,\neg\mathrm{Al}(u).
+$$
 
 6. **Dead** $\mathrm{De}(t)$  
-   $$
-   \alpha(t)\le\varepsilon
-   \;\land\;
-   \exists s<t:\,\alpha(s)>\varepsilon.
-   $$
+$$
+\alpha(t)\le\varepsilon
+\;\land\;
+\exists s<t:\,\alpha(s)>\varepsilon.
+$$
 
 7. **Ended** $\mathrm{En}(t)$  
-   $$
-   \exists s<t:\,\mathrm{Pre}(s)
-   \;\land\;
-   \forall u\ge t:\,\dot x(u)=0.
-   $$
+$$
+\exists s<t:\,\mathrm{Pre}(s)
+\;\land\;
+\forall u\ge t:\,\dot x(u)=0.
+$$
 
 8. **Deactivated** $\mathrm{Da}(t)$  
-   $$
-   \exists s<t:\,\mathrm{Au}(s)
-   \;\land\;
-   \forall u\ge t:\,\dot x(u)=0,\;\dot d_i(u)=0.
-   $$
+$$
+\exists s<t:\,\mathrm{Au}(s)
+\;\land\;
+\forall u\ge t:\,\dot x(u)=0,\;\dot d_i(u)=0.
+$$
 
 9. **Deceased** $\mathrm{Dc}(t)$  
-   $$
-   \exists s<t:\,\mathrm{Se}(s)
-   \;\land\;
-   \forall u\ge t:\,\sigma(u)=0,\;\alpha(u)=0,\;\dot x(u)=0.
-   $$
+$$
+\exists s<t:\,\mathrm{Se}(s)
+\;\land\;
+\forall u\ge t:\,\sigma(u)=0,\;\alpha(u)=0,\;\dot x(u)=0.
+$$
 
 ---
 
@@ -104,68 +122,68 @@ $$
 ### 3.1 Environment & Belief
 
 - **State evolution**  
-  $$
-    \dot x = f\bigl(x,u\bigr) + w,\quad w\sim\mathcal N(0,W).
-  $$
+$$
+\dot x = f\bigl(x,u\bigr) + w,\quad w\sim\mathcal N(0,W).
+$$
 - **Observation**  
-  $$
-    o = H\,x + v,\quad v\sim\mathcal N(0,\Sigma).
-  $$
+$$
+o = H\,x + v,\quad v\sim\mathcal N(0,\Sigma).
+$$
 - **Belief filters**  
   $(\hat x^j,P^j)$, $j=1,\dots,m$  
 - **Uncertainty**  
-  $$
-    U_j = -\mathbb E\bigl[\ln\mathcal N(x;\hat x^j,P^j)\bigr],\quad
-    U_{\rm belief}=\tfrac1m\sum_{j=1}^m U_j.
-  $$
+$$
+U_j = -\mathbb E\bigl[\ln\mathcal N(x;\hat x^j,P^j)\bigr],\quad
+U_{\rm belief}=\tfrac1m\sum_{j=1}^m U_j.
+$$
 
 ### 3.2 Drives & Affect
 
 - **Drive dynamics**  
-  $$
-    \dot d_i
-    = -\gamma_i\bigl(d_i - d^0_i\bigr)
-      + h_i\bigl(x,a\bigr)
-      + \xi_i,\quad \xi_i\sim\mathcal N(0,\Xi_i).
-  $$
+$$
+\dot d_i
+= -\gamma_i\bigl(d_i - d^0_i\bigr)
++ h_i\bigl(x,a\bigr)
++ \xi_i,\quad \xi_i\sim\mathcal N(0,\Xi_i).
+$$
 - **Affective dynamics**  
-  $$
-    \dot a
-    = -\Gamma\,a
-      + g\bigl(Hx,\{\hat x^j\}\bigr)
-      + \sum_{i=1}^n \rho_i\,\psi_i(d_i)
-      - \Lambda\,\bigl\|P^{\rm dr} - \tilde P^{\rm inf}\bigr\|^2.
-  $$
+$$
+\dot a
+= -\Gamma\,a
++ g\bigl(Hx,\{\hat x^j\}\bigr)
++ \sum_{i=1}^n \rho_i\,\psi_i(d_i)
+- \Lambda\,\bigl\|P^{\rm dr} - \tilde P^{\rm inf}\bigr\|^2.
+$$
 
 ### 3.3 Preference Integration & Control
 
 - **Drive‐cost**  
-  $$
-    C_d = \sum_{i=1}^n \chi_i\,(1-\lambda_i)\,\|\psi_i(d_i)\|^2.
-  $$
+$$
+C_d = \sum_{i=1}^n \chi_i\,(1-\lambda_i)\,\|\psi_i(d_i)\|^2.
+$$
 - **Integration weights**  
-  $$
-    \dot\lambda_i
-      = \eta_i\bigl[\alpha_{\rm aff}(a)-\lambda_i\bigr]
-      - \rho_\lambda\,C_d\,\lambda_i.
-  $$
+$$
+\dot\lambda_i
+= \eta_i\bigl[\alpha_{\rm aff}(a)-\lambda_i\bigr]
+- \rho_\lambda\,C_d\,\lambda_i.
+$$
 - **Preference set**  
   $P = P^{\rm end}\cup P^{\rm dr}.$  
 - **Utility weights**  
-  $$
-    w_p =
-    \begin{cases}
-      \alpha, & p\in P^{\rm end},\\
-      \lambda_i\,\chi_i, & p=\psi_i(d_i)\in P^{\rm dr}.
-    \end{cases}
-  $$
+$$
+w_p =
+\begin{cases}
+\alpha, & p\in P^{\rm end},\\
+\lambda_i\,\chi_i, & p=\psi_i(d_i)\in P^{\rm dr}.
+\end{cases}
+$$
 - **Control objective**  
-  $$
-    J(u)
-    = \mathbb E\!\Bigl[\int_t^{t+T}\sum_{p\in P} w_p\,U_p\bigl(x(\tau)\bigr)\,e^{-\rho(\tau-t)}\,d\tau
-      \,\Big|\;\mathcal I(t)\Bigr],\quad
-    u^*=\arg\max_u J(u).
-  $$
+$$
+J(u)
+= \mathbb E\!\Bigl[\int_t^{t+T}\sum_{p\in P} w_p\,U_p\bigl(x(\tau)\bigr)\,e^{-\rho(\tau-t)}\,d\tau
+\,\Big|\;\mathcal I(t)\Bigr],\quad
+u^*=\arg\max_u J(u).
+$$
 
 ---
 
@@ -176,9 +194,9 @@ $$
 $$
 \sigma(t)
 = \alpha_{\rm aff}(a)\;
-  \exp\!\Bigl(-\delta_1\,U_{\rm belief}(t)
-              -\delta_2\,U_{\rm self}(t)
-              -\zeta\,C_d(t)\Bigr),
+\exp\!\Bigl(-\delta_1\,U_{\rm belief}(t)
+-\delta_2\,U_{\rm self}(t)
+-\zeta\,C_d(t)\Bigr),
 $$
 where  
 $$
@@ -216,7 +234,7 @@ $$
 _No function_  
 $$
 F:\{o(\tau),u(\tau)\}_{\tau\le t}\;\to\;\{\mathrm{Pre},\dots,\mathrm{Dc}\}
-$$  
+$$
 _can reliably recover_ $\mathrm{Al}(t)$ or $\mathrm{Se}(t)$.
 
 ---
@@ -232,17 +250,7 @@ $\mathrm{do}(a)$ and $\mathrm{do}(d_i)$ interventions.
 
 ---
 
-## **8. Interpretive Disciplines**
-
-Understood. Here's the final, ultra-minimal revision of **Section 9**, now including:
-
-* Full name–abbreviation mapping,
-* Perturbativity scores with concise risk explanations,
-* A minimal formula for estimating perturbativity.
-
----
-
-## **9. Interpretive Disciplines**
+## 8. Interpretive Disciplines
 
 Let
 
