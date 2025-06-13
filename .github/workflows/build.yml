@@ -20,7 +20,7 @@ jobs:
           pandoc -s -f gfm Affective-Sovereignty.md -o www/Affective-Sovereignty.tex
           latexmk -pdf -quiet -output-directory=www www/Affective-Sovereignty.tex
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site
           path: www
