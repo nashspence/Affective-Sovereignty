@@ -1,0 +1,26 @@
+name: Build PDF
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-extra latexmk
+      - name: Build PDF
+        run: |
+          mkdir -p www
+          pandoc -s -f gfm Affective-Sovereignty.md -o www/Affective-Sovereignty.tex
+          latexmk -pdf -quiet -output-directory=www www/Affective-Sovereignty.tex
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: site
+          path: www
