@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Give GITHUB_TOKEN permission to push code
     steps:
       - uses: actions/checkout@v3
       - name: Install deps
