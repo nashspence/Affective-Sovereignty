@@ -26,7 +26,7 @@ Let:
 Define further:
 - $\sigma(t)\ge0$: **sentience scalar**  
 - $C_d(t)\ge0$: **drive‐cost**  
-- $U_{\rm belief}(t)$, $U_{\rm self}(t)$: **uncertainty measures**  
+ - $U_{\mathrm{belief}}(t)$, $U_{\mathrm{self}}(t)$: **uncertainty measures**
 
 ---
 
@@ -39,7 +39,7 @@ $$
 \mathrm{Pre}(t)\;\lor\;\mathrm{In}(t)\;\lor\;\mathrm{Au}(t)\;\lor\;\mathrm{Al}(t)\;\lor\;\mathrm{Se}(t)\;\lor\;\mathrm{De}(t)\;\lor\;\mathrm{En}(t)\;\lor\;\mathrm{Da}(t)\;\lor\;\mathrm{Dc}(t).
 $$
 
-1. **Preagent** \$\mathrm{Pre}(t)\$
+1. **Preagent** $\mathrm{Pre}(t)$
 
 $$
 \begin{aligned}
@@ -51,7 +51,7 @@ d_i(t)=0\;\forall i.
 \end{aligned}
 $$
 
-2. **Inert** \$\mathrm{In}(t)\$
+2. **Inert** $\mathrm{In}(t)$
 
 $$
 \begin{aligned}
@@ -60,7 +60,7 @@ $$
 \end{aligned}
 $$
 
-3. **Autogen** \$\mathrm{Au}(t)\$
+3. **Autogen** $\mathrm{Au}(t)$
 
 $$
 \begin{aligned}
@@ -69,7 +69,7 @@ $$
 \end{aligned}
 $$
 
-4. **Alive** \$\mathrm{Al}(t)\$
+4. **Alive** $\mathrm{Al}(t)$
 
 $$
 \alpha(t)>\varepsilon
@@ -77,7 +77,7 @@ $$
 \sigma(t)\le\Theta.
 $$
 
-5. **Sentient** \$\mathrm{Se}(t)\$
+5. **Sentient** $\mathrm{Se}(t)$
 
 $$
 \sigma(t)>\Theta
@@ -87,7 +87,7 @@ $$
 \forall u\ge t:\,\neg\mathrm{Al}(u).
 $$
 
-6. **Dead** \$\mathrm{De}(t)\$
+6. **Dead** $\mathrm{De}(t)$
 
 $$
 \alpha(t)\le\varepsilon
@@ -95,7 +95,7 @@ $$
 \exists s<t:\,\alpha(s)>\varepsilon.
 $$
 
-7. **Ended** \$\mathrm{En}(t)\$
+7. **Ended** $\mathrm{En}(t)$
 
 $$
 \exists s<t:\,\mathrm{Pre}(s)
@@ -103,7 +103,7 @@ $$
 \forall u\ge t:\,\dot x(u)=0.
 $$
 
-8. **Deactivated** \$\mathrm{Da}(t)\$
+8. **Deactivated** $\mathrm{Da}(t)$
 
 $$
 \exists s<t:\,\mathrm{Au}(s)
@@ -111,7 +111,7 @@ $$
 \forall u\ge t:\,\dot x(u)=0,\;\dot d_i(u)=0.
 $$
 
-9. **Deceased** \$\mathrm{Dc}(t)\$
+9. **Deceased** $\mathrm{Dc}(t)$
 
 $$
 \exists s<t:\,\mathrm{Se}(s)
@@ -138,13 +138,13 @@ o = H\,x + v,\quad v\sim\mathcal N(0,\Sigma).
 $$
 
 * **Belief filters**
-  \$(\hat x^j,P^j)\$, \$j=1,\dots,m\$
+  $(\hat x^j,P^j)$, $j=1,\dots,m$
 
 * **Uncertainty**
 
 $$
 U_j = -\mathbb E\bigl[\ln\mathcal N(x;\hat x^j,P^j)\bigr],\quad
-U_{\rm belief}=\tfrac1m\sum_{j=1}^m U_j.
+U_{\mathrm{belief}}=\tfrac1m\sum_{j=1}^m U_j.
 $$
 
 ### 3.2 Drives & Affect
@@ -165,7 +165,7 @@ $$
 = -\Gamma\,a
 + g\bigl(Hx,\{\hat x^j\}\bigr)
 + \sum_{i=1}^n \rho_i\,\psi_i(d_i)
-- \Lambda\,\bigl\|P^{\rm dr} - \tilde P^{\rm inf}\bigr\|^2.
+ - \Lambda\,\bigl\|P^{\mathrm{dr}} - \tilde P^{\mathrm{inf}}\bigr\|^2.
 $$
 
 ### 3.3 Preference Integration & Control
@@ -180,20 +180,20 @@ $$
 
 $$
 \dot\lambda_i
-= \eta_i\bigl[\alpha_{\rm aff}(a)-\lambda_i\bigr]
+= \eta_i\bigl[\alpha_{\mathrm{aff}}(a)-\lambda_i\bigr]
 - \rho_\lambda\,C_d\,\lambda_i.
 $$
 
 * **Preference set**
-  \$P = P^{\rm end}\cup P^{\rm dr}.\$
+  $P = P^{\mathrm{end}}\cup P^{\mathrm{dr}}.$
 
 * **Utility weights**
 
 $$
 w_p =
 \begin{cases}
-\alpha, & p\in P^{\rm end},\\
-\lambda_i\,\chi_i, & p=\psi_i(d_i)\in P^{\rm dr}.
+\alpha, & p\in P^{\mathrm{end}},\\
+\lambda_i\,\chi_i, & p=\psi_i(d_i)\in P^{\mathrm{dr}}.
 \end{cases}
 $$
 
@@ -214,23 +214,23 @@ $$
 
 $$
 \sigma(t)
-= \alpha_{\rm aff}(a)\;
-\exp\!\Bigl(-\delta_1\,U_{\rm belief}(t)
--\delta_2\,U_{\rm self}(t)
+= \alpha_{\mathrm{aff}}(a)\;
+\exp\!\Bigl(-\delta_1\,U_{\mathrm{belief}}(t)
+-\delta_2\,U_{\mathrm{self}}(t)
 -\zeta\,C_d(t)\Bigr),
 $$
 
 where
 
 $$
-U_{\rm self}(t)
-= -\mathbb E\bigl[\ln \mathbb P\bigl(P^{\rm true}\mid u(\tau<t)\bigr)\bigr].
+U_{\mathrm{self}}(t)
+= -\mathbb E\bigl[\ln \mathbb P\bigl(P^{\mathrm{true}}\mid u(\tau<t)\bigr)\bigr].
 $$
 
 ### 4.2 Preference‐Inference
 
 $$
-\tilde P^{\rm inf}(t)
+\tilde P^{\mathrm{inf}}(t)
 = \arg\max_{P'} \mathbb P\bigl(u(\tau<t)\mid P'\bigr).
 $$
 
@@ -264,20 +264,20 @@ $$
 F:\{o(\tau),u(\tau)\}_{\tau\le t}\;\to\;\{\mathrm{Pre},\dots,\mathrm{Dc}\}
 $$
 
-*can reliably recover* \$\mathrm{Al}(t)\$ or \$\mathrm{Se}(t)\$.
+*can reliably recover* $\mathrm{Al}(t)$ or $\mathrm{Se}(t)$.
 
 ---
 
 ## 7. SCM Embedding
 
-Embed in SCM \$\mathcal M\$ with endogenous variables
+Embed in SCM $\mathcal M$ with endogenous variables
 
 $$
 \{\,a,\,d_i,\,\hat x^j,\,P^j,\,\alpha,\,\sigma,\,\lambda_i\}
 $$
 
-and structural equation for \$\sigma(t)\$, enabling
-\$\mathrm{do}(a)\$ and \$\mathrm{do}(d\_i)\$ interventions.
+and structural equation for $\sigma(t)$, enabling
+$\mathrm{do}(a)$ and $\mathrm{do}(d\_i)$ interventions.
 
 ---
 
@@ -286,20 +286,20 @@ and structural equation for \$\sigma(t)\$, enabling
 Let
 
 $$
-\mathcal{I}_{\rm ext} = \{\mathrm{PA}, \mathrm{AP}, \mathrm{EO}, \mathrm{PL}, \mathrm{DS}, \mathrm{NH}, \mathrm{AI}, \dots\}
+\mathcal{I}_{\mathrm{ext}} = \{\mathrm{PA}, \mathrm{AP}, \mathrm{EO}, \mathrm{PL}, \mathrm{DS}, \mathrm{NH}, \mathrm{AI}, \dots\}
 $$
 
-be **external interpretive disciplines**: pre-existing adaptable observational heuristics for inferring latent interior structure from \${o(\tau), u(\tau)}\_{\tau \le t}\$, without direct access to endogenous variables.
+be **external interpretive disciplines**: pre-existing adaptable observational heuristics for inferring latent interior structure from ${o(\tau), u(\tau)}\_{\tau \le t}$, without direct access to endogenous variables.
 
-Each \$\mathcal{I}\$ maps observation to hypothesis:
+Each $\mathcal{I}$ maps observation to hypothesis:
 
 $$
 \mathcal{I}[o,u] \mapsto \hat{\mathcal{C}}(t)
 $$
 
-and carries a **perturbativity** scalar \$\pi\_{\mathcal{I}} \in \[0,1]\$, estimating risk of interior alteration.
+and carries a **perturbativity** scalar $\pi\_{\mathcal{I}} \in [0,1]$, estimating risk of interior alteration.
 
-| Abbr. | Name                      | Modes       | \$\pi\_{\mathcal{I}}\$ | Risk Summary                  |
+| Abbr. | Name                      | Modes       | $\pi\_{\mathcal{I}}$ | Risk Summary                  |
 | ----- | ------------------------- | ----------- | ---------------------- | ----------------------------- |
 | EO    | Ethology                  | Pre, Au, Al | 0.1                    | Passive observation           |
 | AP    | Autopoiesis               | Pre, Au     | 0.2                    | Low coupling, viability focus |
@@ -324,12 +324,12 @@ These disciplines enable inference under opacity by balancing **interpretive dep
 ## 9. Clarifications
 
 1. **Abstraction**: interior variables are high-level indices.
-2. **Scalars**: \$\alpha,\sigma\$ summarize, not reduce, rich interior dynamics.
-3. **Drive Integration**: \$\lambda\_i\$ encodes tension in preference incorporation.
+2. **Scalars**: $\alpha,\sigma$ summarize, not reduce, rich interior dynamics.
+3. **Drive Integration**: $\lambda\_i$ encodes tension in preference incorporation.
 4. **Opacity**: true interior state is private to the agent.
-5. **Exploration**: \$J(u)\$ admits non-instrumental choices via \$P^{\rm end}\$.
-6. **Context**: enters through \$o\$, belief updates, and drive modulators \$h\_i\$.
-7. **Endogenous Values**: all \$w\_p\$ arise from agent’s own loop, grounding its normativity internally.
+5. **Exploration**: $J(u)$ admits non-instrumental choices via $P^{\mathrm{end}}$.
+6. **Context**: enters through $o$, belief updates, and drive modulators $h\_i$.
+7. **Endogenous Values**: all $w\_p$ arise from agent’s own loop, grounding its normativity internally.
 8. **Reflexivity**: presupposes affect, belief, value as grounding capacities.
 9. **Counterfactuals**: SCM “do(·)” probes latent interior variables.
 10. **Anti-reduction**: preserves coherence without collapsing interior richness.
