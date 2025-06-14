@@ -22,8 +22,8 @@ jobs:
       - name: Prepare docs
         run: |
           mkdir docs
-          pandoc -s -f gfm Affective-Sovereignty.md -o docs/Affective-Sovereignty.pdf
-          latexmk -pdf -quiet docs/Affective-Sovereignty.pdf
+          pandoc -s -f gfm Affective-Sovereignty.md -o docs/Affective-Sovereignty.tex
+          latexmk -pdf -quiet -output-directory=docs docs/Affective-Sovereignty.tex
           cp index.html docs/
 
       - name: Upload Pages artifact
