@@ -17,12 +17,12 @@ jobs:
       - uses: actions/checkout@v4                         # bumped to v4 per upload-pages-artifact’s Dependabot update :contentReference[oaicite:0]{index=0}
 
       - name: Install tools
-        run: sudo apt-get update && sudo apt-get install -y texlive-latex-extra latexmk
+        run: sudo apt-get update && sudo apt-get install -y pandoc texlive-latex-extra latexmk
 
       - name: Prepare docs
         run: |
           mkdir docs
-          cp Affective-Sovereignty.tex docs/
+          pandoc -s -f gfm Affective-Sovereignty.md -o docs/Affective-Sovereignty.tex
           latexmk -pdf -quiet -output-directory=docs docs/Affective-Sovereignty.tex
           cp index.html docs/
 
