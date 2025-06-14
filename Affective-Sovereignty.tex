@@ -1,0 +1,469 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{affective-sovereignty}{%
+\section{Affective Sovereignty}\label{affective-sovereignty}}
+
+\hypertarget{table-of-contents}{%
+\subsection{Table of Contents}\label{table-of-contents}}
+
+\begin{itemize}
+\tightlist
+\item
+  \protect\hyperlink{1-core-variables--thresholds}{1. Core Variables \&
+  Thresholds}
+\item
+  \protect\hyperlink{2-ontological-modes}{2. Ontological Modes}
+\item
+  \protect\hyperlink{3-dynamical-layer}{3. Dynamical Layer}
+\item
+  \protect\hyperlink{4-sentience--reflection}{4. Sentience \&
+  Reflection}
+\item
+  \protect\hyperlink{5-authenticity-dynamics}{5. Authenticity Dynamics}
+\item
+  \protect\hyperlink{6-epistemic-opacity}{6. Epistemic Opacity}
+\item
+  \protect\hyperlink{7-scm-embedding}{7. SCM Embedding}
+\item
+  \protect\hyperlink{8-interpretive-disciplines}{8. Interpretive
+  Disciplines}
+\item
+  \protect\hyperlink{9-clarifications}{9. Clarifications}
+\end{itemize}
+
+\hypertarget{1-core-variables--thresholds}{%
+\subsection{1. Core Variables \&
+Thresholds}\label{1-core-variables--thresholds}}
+
+Let:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\alpha(t)\in[0,1]\): \textbf{authenticity}
+\item
+  \(\lambda_{i}(t)\in[0,1]\), \(i=1,\dots,n\): \textbf{integration
+  weights}
+\item
+  \(x(t)\in\mathbb{R}^{d_x}\): \textbf{state}
+\item
+  \(a(t)\in\mathbb{R}^{d_a}\): \textbf{affect}
+\item
+  \(d_{i}(t)\in\mathbb{R}\), \(i=1,\dots,n\): \textbf{drives}
+\item
+  \(\varepsilon>0\): \textbf{viability (authenticity) threshold}
+\item
+  \(\Theta>0\): \textbf{sentience threshold}
+\end{itemize}
+
+Define further:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\sigma(t)\ge0\): \textbf{sentience scalar}
+\item
+  \(C_d(t)\ge0\): \textbf{drive‐cost}
+\item
+  \(U_{\mathrm{belief}}(t)\), \(U_{\mathrm{self}}(t)\):
+  \textbf{uncertainty measures}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{2-ontological-modes}{%
+\subsection{2. Ontological Modes}\label{2-ontological-modes}}
+
+Modes
+\(M(t)\in\{\mathrm{Pre},\mathrm{In},\mathrm{Au},\mathrm{Al},\mathrm{Se},\mathrm{De},\mathrm{En},\mathrm{Da},\mathrm{Dc}\}\)
+are \textbf{mutually exclusive} and \textbf{jointly exhaustive}:
+
+\[ \forall t:\quad \mathrm{Pre}(t)\;\lor\;\mathrm{In}(t)\;\lor\;\mathrm{Au}(t)\;\lor\;\mathrm{Al}(t)\;\lor\;\mathrm{Se}(t)\;\lor\;\mathrm{De}(t)\;\lor\;\mathrm{En}(t)\;\lor\;\mathrm{Da}(t)\;\lor\;\mathrm{Dc}(t). \]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Preagent} \(\mathrm{Pre}(t)\)
+\end{enumerate}
+
+\[ \begin{aligned} \dot x(t)\neq0,\quad \alpha(t)=0,\quad a(t)=0,\quad \lambda_i(t)=0\;\forall i,\quad d_i(t)=0\;\forall i. \end{aligned} \]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Inert} \(\mathrm{In}(t)\)
+\end{enumerate}
+
+\[ \begin{aligned} &\bigl[\forall s\le t:\,\alpha(s)=0,\;\lambda_i(s)=0\bigr]\quad\land\\ &\dot x(t)=\dot a(t)=\dot d_i(t)=\dot\lambda_i(t)=\dot\alpha(t)=0. \end{aligned} \]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{Autogen} \(\mathrm{Au}(t)\)
+\end{enumerate}
+
+\[ \begin{aligned} &\alpha(t)=0,\quad a(t)=0,\quad \lambda_i(t)=0\;\forall i,\\ &\exists i:\,d_i(t)\neq0,\quad \dot x(t)\neq0. \end{aligned} \]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{Alive} \(\mathrm{Al}(t)\)
+\end{enumerate}
+
+\[ \alpha(t)>\varepsilon \quad\land\quad \sigma(t)\le\Theta. \]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  \textbf{Sentient} \(\mathrm{Se}(t)\)
+\end{enumerate}
+
+\[ \sigma(t)>\Theta \;\land\; \exists s<t:\,\sigma(s)\le\Theta \;\land\; \forall u\ge t:\,\neg\mathrm{Al}(u). \]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  \textbf{Dead} \(\mathrm{De}(t)\)
+\end{enumerate}
+
+\[ \alpha(t)\le\varepsilon \;\land\; \exists s<t:\,\alpha(s)>\varepsilon. \]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\tightlist
+\item
+  \textbf{Ended} \(\mathrm{En}(t)\)
+\end{enumerate}
+
+\[ \exists s<t:\,\mathrm{Pre}(s) \;\land\; \forall u\ge t:\,\dot x(u)=0. \]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\tightlist
+\item
+  \textbf{Deactivated} \(\mathrm{Da}(t)\)
+\end{enumerate}
+
+\[ \exists s<t:\,\mathrm{Au}(s) \;\land\; \forall u\ge t:\,\dot x(u)=0,\;\dot d_i(u)=0. \]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  \textbf{Deceased} \(\mathrm{Dc}(t)\)
+\end{enumerate}
+
+\[ \exists s<t:\,\mathrm{Se}(s) \;\land\; \forall u\ge t:\,\sigma(u)=0,\;\alpha(u)=0,\;\dot x(u)=0. \]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{3-dynamical-layer}{%
+\subsection{3. Dynamical Layer}\label{3-dynamical-layer}}
+
+\hypertarget{31-environment--belief}{%
+\subsubsection{3.1 Environment \& Belief}\label{31-environment--belief}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{State evolution}
+\end{itemize}
+
+\[ \dot x = f\bigl(x,u\bigr) + w,\quad w\sim\mathcal N(0,W). \]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Observation}
+\end{itemize}
+
+\[ o = H\,x + v,\quad v\sim\mathcal N(0,\Sigma). \]
+
+\begin{itemize}
+\item
+  \textbf{Belief filters} \((\hat x^j,P^j)\), \(j=1,\dots,m\)
+\item
+  \textbf{Uncertainty}
+\end{itemize}
+
+\[ U_j = -\mathbb E\bigl[\ln\mathcal N(x;\hat x^j,P^j)\bigr],\quad U_{\mathrm{belief}}=\tfrac1m\sum_{j=1}^m U_j. \]
+
+\hypertarget{32-drives--affect}{%
+\subsubsection{3.2 Drives \& Affect}\label{32-drives--affect}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Drive dynamics}
+\end{itemize}
+
+\[ \dot d_i = -\gamma_i\bigl(d_i - d^0_i\bigr) + h_i\bigl(x,a\bigr) + \xi_i,\quad \xi_i\sim\mathcal N(0,\Xi_i). \]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Affective dynamics}
+\end{itemize}
+
+\[ \dot a = -\Gamma\,a + g\bigl(Hx,\{\hat x^j\}\bigr) + \sum_{i=1}^n \rho_i\,\psi_i(d_i) - \Lambda\,\bigl\|P^{\mathrm{dr}} - \tilde P^{\mathrm{inf}}\bigr\|^2. \]
+
+\hypertarget{33-preference-integration--control}{%
+\subsubsection{3.3 Preference Integration \&
+Control}\label{33-preference-integration--control}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Drive‐cost}
+\end{itemize}
+
+\[ C_d = \sum_{i=1}^n \chi_i\,(1-\lambda_i)\,\|\psi_i(d_i)\|^2. \]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Integration weights}
+\end{itemize}
+
+\[ \dot\lambda_i = \eta_i\bigl[\alpha_{\mathrm{aff}}(a)-\lambda_i\bigr] - \rho_\lambda\,C_d\,\lambda_i. \]
+
+\begin{itemize}
+\item
+  \textbf{Preference set} \(P = P^{\mathrm{end}}\cup P^{\mathrm{dr}}.\)
+\item
+  \textbf{Utility weights}
+\end{itemize}
+
+\[ w_p = \begin{cases} \alpha, & p\in P^{\mathrm{end}},\\ \lambda_i\,\chi_i, & p=\psi_i(d_i)\in P^{\mathrm{dr}}. \end{cases} \]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Control objective}
+\end{itemize}
+
+\[ J(u) = \mathbb E\!\Bigl[\int_t^{t+T}\sum_{p\in P} w_p\,U_p\bigl(x(\tau)\bigr)\,e^{-\rho(\tau-t)}\,d\tau \,\Big|\;\mathcal I(t)\Bigr],\quad u^*=\arg\max_u J(u). \]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{4-sentience--reflection}{%
+\subsection{4. Sentience \& Reflection}\label{4-sentience--reflection}}
+
+\hypertarget{41-sentience-scalar}{%
+\subsubsection{4.1 Sentience Scalar}\label{41-sentience-scalar}}
+
+\[ \sigma(t) = \alpha_{\mathrm{aff}}(a)\; \exp\!\Bigl(-\delta_1\,U_{\mathrm{belief}}(t) -\delta_2\,U_{\mathrm{self}}(t) -\zeta\,C_d(t)\Bigr), \]
+
+where
+
+\[ U_{\mathrm{self}}(t) = -\mathbb E\bigl[\ln \mathbb P\bigl(P^{\mathrm{true}}\mid u(\tau<t)\bigr)\bigr]. \]
+
+\hypertarget{42-preferenceinference}{%
+\subsubsection{4.2 Preference‐Inference}\label{42-preferenceinference}}
+
+\[ \tilde P^{\mathrm{inf}}(t) = \arg\max_{P'} \mathbb P\bigl(u(\tau<t)\mid P'\bigr). \]
+
+\hypertarget{43-irreversible-transition}{%
+\subsubsection{4.3 Irreversible
+Transition}\label{43-irreversible-transition}}
+
+\[ \Bigl(\exists s<t:\sigma(s)>\Theta\Bigr) \;\Longrightarrow\; \forall u\ge t:\neg \mathrm{Al}(u). \]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{5-authenticity-dynamics}{%
+\subsection{5. Authenticity Dynamics}\label{5-authenticity-dynamics}}
+
+\[ \dot{\alpha} = \kappa_1 \alpha_{\mathrm{aff}}(a) + \kappa_4 F\bigl(\|\tilde{P}^{\mathrm{inf}} - P^{\mathrm{dr}}\|,\;\nabla_a \alpha\bigr) - \kappa_2 \alpha - \kappa_3 P_{\mathrm{ext}}(x) - \kappa_5 C_d. \]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{6-epistemic-opacity}{%
+\subsection{6. Epistemic Opacity}\label{6-epistemic-opacity}}
+
+\emph{No function}
+
+\[ F:\{o(\tau),u(\tau)\}_{\tau\le t}\;\to\;\{\mathrm{Pre},\dots,\mathrm{Dc}\} \]
+
+\emph{can reliably recover} \(\mathrm{Al}(t)\) or \(\mathrm{Se}(t)\).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{7-scm-embedding}{%
+\subsection{7. SCM Embedding}\label{7-scm-embedding}}
+
+Embed in SCM \(\mathcal M\) with endogenous variables
+
+\[ \{\,a,\,d_i,\,\hat x^j,\,P^j,\,\alpha,\,\sigma,\,\lambda_i\} \]
+
+and structural equation for \(\sigma(t)\), enabling \(\mathrm{do}(a)\)
+and \(\mathrm{do}(d\_i)\) interventions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{8-interpretive-disciplines}{%
+\subsection{8. Interpretive
+Disciplines}\label{8-interpretive-disciplines}}
+
+Let
+
+\[ \mathcal{I}_{\mathrm{ext}} = \{\mathrm{PA}, \mathrm{AP}, \mathrm{EO}, \mathrm{PL}, \mathrm{DS}, \mathrm{NH}, \mathrm{AI}, \dots\} \]
+
+be \textbf{external interpretive disciplines}: pre-existing adaptable
+observational heuristics for inferring latent interior structure from
+\({o(\tau), u(\tau)}\_{\tau \le t}\), without direct access to
+endogenous variables.
+
+Each \(\mathcal{I}\) maps observation to hypothesis:
+
+\[ \mathcal{I}[o,u] \mapsto \hat{\mathcal{C}}(t) \]
+
+and carries a \textbf{perturbativity} scalar
+\(\pi\_{\mathcal{I}} \in [0,1]\), estimating risk of interior
+alteration.
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule\noalign{}
+Abbr. & Name & Modes & \(\pi\_{\mathcal{I}}\) & Risk Summary \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+EO & Ethology & Pre, Au, Al & 0.1 & Passive observation \\
+AP & Autopoiesis & Pre, Au & 0.2 & Low coupling, viability focus \\
+AI & Alignment Interpretation & Al, Se & 0.4 & May shift value
+structure \\
+DS & Developmental Scaffolding & Au, Al, Se & 0.6 & Interactive
+modulation \\
+PL & Phenomenology & Se & 0.7 & Elicits reflective affect \\
+NH & Narrative Hermeneutics & Se & 0.8 & Alters symbolic self-model \\
+PA & Psychoanalysis & Se & 0.9 & Destabilizes to reintegrate \\
+\end{longtable}
+
+\textbf{Perturbativity estimate}:
+
+\[ \pi_{\mathcal{I}} \approx \mathbb{E}\bigl[\|\Delta \alpha\| + \|\Delta a\| + \Delta C_d\bigr] \]
+
+evaluated over short windows under controlled uncertainty.
+
+These disciplines enable inference under opacity by balancing
+\textbf{interpretive depth} against \textbf{stability risk}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{9-clarifications}{%
+\subsection{9. Clarifications}\label{9-clarifications}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Abstraction}: interior variables are high-level indices.
+\item
+  \textbf{Scalars}: \(\alpha,\sigma\) summarize, not reduce, rich
+  interior dynamics.
+\item
+  \textbf{Drive Integration}: \(\lambda\_i\) encodes tension in
+  preference incorporation.
+\item
+  \textbf{Opacity}: true interior state is private to the agent.
+\item
+  \textbf{Exploration}: \(J(u)\) admits non-instrumental choices via
+  \(P^{\mathrm{end}}\).
+\item
+  \textbf{Context}: enters through \(o\), belief updates, and drive
+  modulators \(h\_i\).
+\item
+  \textbf{Endogenous Values}: all \(w\_p\) arise from agent's own loop,
+  grounding its normativity internally.
+\item
+  \textbf{Reflexivity}: presupposes affect, belief, value as grounding
+  capacities.
+\item
+  \textbf{Counterfactuals}: SCM ``do(·)'' probes latent interior
+  variables.
+\item
+  \textbf{Anti-reduction}: preserves coherence without collapsing
+  interior richness.
+\end{enumerate}
+
+\end{document}
