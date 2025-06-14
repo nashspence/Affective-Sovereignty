@@ -169,7 +169,7 @@ Embed in SCM $\mathcal M$ with endogenous variables
 $$ \{\,a,\,d_i,\,\hat x^j,\,P^j,\,\alpha,\,\sigma,\,\lambda_i\} $$
 
 and structural equation for $\sigma(t)$, enabling
-$\mathrm{do}(a)$ and $\mathrm{do}(d\_i)$ interventions.
+$\mathrm{do}(a)$ and $\mathrm{do}(d_i)$ interventions.
 
 ---
 
@@ -179,15 +179,15 @@ Let
 
 $$ \mathcal{I}_{\mathrm{ext}} = \{\mathrm{PA}, \mathrm{AP}, \mathrm{EO}, \mathrm{PL}, \mathrm{DS}, \mathrm{NH}, \mathrm{AI}, \dots\} $$
 
-be **external interpretive disciplines**: pre-existing adaptable observational heuristics for inferring latent interior structure from ${o(\tau), u(\tau)}\_{\tau \le t}$, without direct access to endogenous variables.
+be **external interpretive disciplines**: pre-existing adaptable observational heuristics for inferring latent interior structure from ${o(\tau), u(\tau)}_{\tau \le t}$, without direct access to endogenous variables.
 
 Each $\mathcal{I}$ maps observation to hypothesis:
 
 $$ \mathcal{I}[o,u] \mapsto \hat{\mathcal{C}}(t) $$
 
-and carries a **perturbativity** scalar $\pi\_{\mathcal{I}} \in [0,1]$, estimating risk of interior alteration.
+and carries a **perturbativity** scalar $\pi_{\mathcal{I}} \in [0,1]$, estimating risk of interior alteration.
 
-| Abbr. | Name                      | Modes       | $\pi\_{\mathcal{I}}$ | Risk Summary                  |
+| Abbr. | Name                      | Modes       | $\pi_{\mathcal{I}}$ | Risk Summary                  |
 | ----- | ------------------------- | ----------- | ---------------------- | ----------------------------- |
 | EO    | Ethology                  | Pre, Au, Al | 0.1                    | Passive observation           |
 | AP    | Autopoiesis               | Pre, Au     | 0.2                    | Low coupling, viability focus |
@@ -211,11 +211,11 @@ These disciplines enable inference under opacity by balancing **interpretive dep
 
 1. **Abstraction**: interior variables are high-level indices.
 2. **Scalars**: $\alpha,\sigma$ summarize, not reduce, rich interior dynamics.
-3. **Drive Integration**: $\lambda\_i$ encodes tension in preference incorporation.
+3. **Drive Integration**: $\lambda_i$ encodes tension in preference incorporation.
 4. **Opacity**: true interior state is private to the agent.
 5. **Exploration**: $J(u)$ admits non-instrumental choices via $P^{\mathrm{end}}$.
-6. **Context**: enters through $o$, belief updates, and drive modulators $h\_i$.
-7. **Endogenous Values**: all $w\_p$ arise from agent’s own loop, grounding its normativity internally.
+6. **Context**: enters through $o$, belief updates, and drive modulators $h_i$.
+7. **Endogenous Values**: all $w_p$ arise from agent’s own loop, grounding its normativity internally.
 8. **Reflexivity**: presupposes affect, belief, value as grounding capacities.
 9. **Counterfactuals**: SCM “do(·)” probes latent interior variables.
 10. **Anti-reduction**: preserves coherence without collapsing interior richness.
